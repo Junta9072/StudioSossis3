@@ -1,0 +1,107 @@
+{
+  "timetable_items": [
+    {
+      "name": "Health & Social Sciences",
+      "full_name": "Health & Social Sciences",
+      "timestamp": "'17 — '20",
+      "colors": [
+        "#5fa0ff",
+        "linear-gradient(90deg, #0c0715 0%, #001f4c 50%)",
+        "#001f4c"
+      ],
+      "grid_area": "3/2/span 1/span 1",
+      "description": "My secondary education degree was in Borsbeek Antwerp, during which I interned at both elderly housing centre's and elementary schools. Both were a huge learning experience in which some of the skills I had acquired during my time in scouting could be put to good use.",
+      "image_urls": ["/2024/11/sji2.jpg", "/2024/11/sji1.jpg"]
+    },
+    {
+      "name": "Art School",
+      "full_name": "Academia Art School",
+      "timestamp": "'07 — '20",
+      "colors": [
+        "#f4a031",
+        "linear-gradient(90deg, #0c0715 0%, #752f00 50%)",
+        "#752f00"
+      ],
+      "grid_area": "5/2/span 1/span 1",
+      "description": "I've spent more than half of the saturdays in my life at this art school. This was the basis of my interest in illustration, storytelling, and graphic design. Sadly after 12 years, I had to graduate via zoom call.",
+      "image_urls": [
+        "/2024/11/yarne-kakkerlak001.jpg",
+        "/2024/11/academia4.png",
+        "/2024/11/academia1.jpg"
+      ]
+    },
+    {
+      "name": "Scouts Impeesa",
+      "full_name": "Scouts Impeesa",
+      "timestamp": "'07 — '22",
+      "description": "Being a scout for 10+ years included so many learning experiences, from small things like independence and being open to new things. To bigger things like becoming a scout leader, and catering activities to different groups of children.",
+      "colors": [
+        "#d4f96e",
+        "linear-gradient(90deg, #0c0715 0%, #29421b 33%)",
+        "#29421b"
+      ],
+      "grid_area": "4/2/span 1/span 3",
+      "image_urls": [
+        "/2024/11/Screenshot-2024-11-19-180453.png",
+        "/2024/11/Screenshot-2024-11-19-180936.png",
+        "/2024/11/IMG20220725141647.jpg"
+      ]
+    },
+    {
+      "name": "Graphic & Digital Design",
+      "full_name": "Graphic & Digital Design @AP hogeshool",
+      "timestamp": "'20 — '23",
+      "description": "Upgrading my hobby to my degree was a massive change. Learning print, brand, motion and web design were 3 amazing years. Making friends and making projects I love to this day.",
+      "colors": ["#d65bd3", "#2d0235", "#2d0235"],
+      "grid_area": "3/3/span 1/span 4",
+      "image_urls": [
+        "/2024/11/Screenshot-2024-11-19-181623.png",
+        "/2024/11/Screenshot-2024-11-19-182233.png",
+        "/2024/11/digitaexportt2.png"
+      ]
+    },
+    {
+      "name": "ITP",
+      "full_name": "In The Pocket",
+      "timestamp": "'23 — '23",
+      "description": "Wrapping up my degree at AP hogeschool meant that I had to set my sights on not only my bachelor project, but also an internship. At In The Pocket I got the amazing opportunity to level up my UI and UX skills, the biggest lesson however was working in a team and following design guides set by a client or the company.",
+      "colors": ["#6cffb5", "#223f30", "#223f30"],
+      "grid_area": "2/6/span 1/span 1",
+      "image_urls": [
+        "/uploads/2024/11/5e16dd3bcb9d51805fdf2177_SEO-Home.jpg",
+        "/2024/11/Screenshot-2024-11-19-162035.png",
+        "/2024/11/chore-menu-integration-yarne_00004.jpg"
+      ]
+    },
+    {
+      "name": "Game Graphics Production",
+      "colors": ["#f95d91", "#5c101a", "#5c101a"],
+      "grid_area": "3/7 / span 1 / span 1",
+      "full_name": "Game Graphics Production @DAE",
+      "timestamp": "'23 — '24",
+      "description": "Looking for more, I signed up for game graphics production. In the year I spent at DAE I learned to model low and high poly in Maya, stepped up my digital painting and environment design. And got to know procedural modelling in houdini.",
+      "image_urls": [
+        "/2024/09/Brangers_Yarne_GameArtWeapon_BeautyShot-1.png",
+        "/2024/09/Beauty.jpg",
+        "/2024/11/Brangers_Yarne_-Rustairborn-_pres-1.png"
+      ]
+    },
+    {
+      "name": "Job Hunt",
+      "full_name": "Ready for the next chapter",
+      "description": "With a degree in Graphic and digital design in my pocket, and experience in 3D modelling. I'm now looking for something more. A new opportunity in UI, UX, web or graphic design. All the while putting my skills to work for my enjoyment, and hopefully to show off.",
+      "colors": [
+        "#b4b4b4",
+        "linear-gradient(90deg,rgba(58, 58, 58, 1) 0%,#0c0715 100%)",
+        "#3a3a3a"
+      ],
+      "timestamp": "'24",
+      "grid_area": "3/8/span 1/span 1",
+      "image_urls": [
+        "/2024/11/Artboard-29.jpg",
+        "/2024/11/JH1.png",
+        "/2024/10/stadje.png"
+      ]
+    }
+  ]
+}

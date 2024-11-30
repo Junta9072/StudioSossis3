@@ -1,0 +1,50 @@
+@import url("../styles/globals.css");
+
+.blog__page {
+  width: 100%;
+  display: grid;
+  height: 100dvh;
+}
+
+.blog__header {
+  grid-area: 1/1 / span 1 / span 1;
+  width: var(--menuOffset);
+  padding: var(--gutterSTD);
+  box-sizing: border-box;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8) 33%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.blog__title {
+  font-size: 42pt;
+  color: white;
+  font-family: joyride;
+  text-transform: uppercase;
+  padding-bottom: var(--gutterSTD);
+  border-bottom: var(--borderSTD);
+}
+
+.blog__desc {
+  padding-top: var(--gutterSTD);
+  line-height: 1.2;
+  color: white;
+  font-family: montreal;
+}
+
+.blog__desc a {
+  color: #ff4700;
+}
+
+.blog__desc a:visited {
+  color: #ffa394;
+}
+
+.blog__img {
+  grid-area: 1/1 / span 1 / span 1;
+
+  background-size: cover;
+  background-position: bottom;
+}

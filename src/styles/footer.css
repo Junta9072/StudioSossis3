@@ -1,0 +1,81 @@
+@import url("../styles/globals.css");
+
+.footer * {
+  font-family: montreal;
+  color: white;
+}
+
+.footer {
+  width: 100vw;
+  background-color: black;
+  height: 100%;
+  box-sizing: border-box;
+  padding: var(--gutterSTD);
+}
+
+.footer__container {
+  width: calc(100% - 94px);
+  padding-top: var(--gutterSTD);
+  padding-bottom: var(--gutterSTD);
+  box-sizing: border-box;
+  border-top: var(--borderSTD);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--gutterSTD);
+}
+
+.footer__logo__sossis {
+  filter: invert(1);
+  width: 24px;
+  height: 24px;
+}
+
+.footer__dashboard {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gutterSTD);
+}
+
+.footer__link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__mail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.footer__mail__icon {
+  width: 24px;
+}
+
+/* @media (max-width: 970px) {
+} */
+
+@media (max-width: 770px) {
+  .footer__container {
+    flex-direction: column;
+    gap: var(--gutterSTD);
+  }
+}
+
+@media (max-width: 590px) {
+  .footer__dashboard {
+    flex-direction: column;
+  }
+}

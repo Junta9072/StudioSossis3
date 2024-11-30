@@ -1,0 +1,271 @@
+.tagCase {
+  padding-top: 50px;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  font-family: montreal;
+  font-size: 32pt;
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+
+.tagLine__line {
+  position: relative;
+  /* border-bottom: var(--borderSTD); */
+  margin-top: 4px;
+}
+
+.tagLine__marquee {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+
+  width: max-content;
+
+  animation: 120s linear tagLineANI infinite;
+}
+
+.tagLine__marquee2 {
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.tagLine__phrase {
+  position: relative;
+  margin: 0px 4px;
+  display: flex;
+  flex-direction: row;
+
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.tagLine__word {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+
+  transition: var(--transitionSTD__length) ease-in-out;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.tagLine__bgWipe {
+  transition: var(--transitionSTD__length) ease-in-out;
+  width: 0%;
+  height: 100%;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  border-radius: 4px;
+}
+
+.tagLine__hover .tagLine__bgWipe {
+  width: 100%;
+}
+
+/* old css */
+
+/* .tagLine__marquee {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+
+  font-size: 32pt;
+  text-transform: uppercase;
+  font-family: montreal;
+  font-weight: 1000;
+  font-variation-settings: "wdth" 50;
+  border-bottom: var(--borderSTD);
+} */
+
+/* .tagLine__marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: tagLineANI 120s linear infinite;
+  animation-delay: -60s;
+} */
+
+/* .tagLine__marquee2 span {
+  animation-delay: 0s;
+} */
+
+@keyframes tagLineANI {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.tagLine__line .tagIcon__container {
+  height: var(--gutterLRG);
+  width: var(--gutterLRG);
+  padding-top: 1px;
+  margin-left: 4px;
+}
+
+.tagLine__word .tagIcon__container {
+  transition: var(--transitionSTD) ease-in-out;
+  opacity: 0;
+}
+
+.tagLine__line .tagIcon {
+  height: 100%;
+  width: 100%;
+}
+
+.tagLine__hover .tagIcon__container {
+  opacity: 1;
+}
+
+.tagFilter__container {
+  width: 100%;
+  overflow: clip;
+  height: 188px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.4s ease-out;
+}
+
+.tagFilter__preBg {
+  width: 100%;
+
+  transition: height 0.4s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tagFilter__active {
+  height: 188px;
+  pointer-events: all;
+}
+
+.tagFilter__hidden {
+  pointer-events: none;
+}
+
+.tagFilter__active .tagFilter__bg,
+.tagFilter__active .tagFilter__preBg {
+  height: 100%;
+}
+
+.tagFilter__hidden .tagFilter__bg,
+.tagFilter__hidden .tagFilter__preBg {
+  height: 0%;
+}
+
+.tagFilter__bg {
+  width: 100%;
+  height: 0px;
+
+  transition: height 0.4s ease-out 0.1s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.tagFilter__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--gutterSTD);
+
+  margin-right: 80px;
+}
+
+.tagFilter__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gutterSTD);
+}
+
+.tagFilter__icons {
+  display: flex;
+  gap: var(--gutterSTD);
+}
+
+.tagFilter__title .tagIcon__container {
+  height: 36px;
+  width: 36px;
+}
+
+.tagFilter__title .tagIcon {
+  height: 36px;
+  width: 36px;
+}
+
+.tagFilter__close {
+  width: 36px;
+  height: 36px;
+}
+
+.tagFilter__sossisBg {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  pointer-events: none;
+}
+
+.tagFilter__counter {
+  text-transform: none;
+  font-size: 12pt;
+  width: max-content;
+  padding: 4px var(--gutterSTD);
+  border-radius: 50px;
+}
+
+/* @media (max-width: 970px) {
+}
+
+@media (max-width: 770px) {
+} */
+
+@media (max-width: 590px) {
+  .tagFilter__title {
+    font-size: 18pt;
+    flex-direction: column;
+  }
+
+  .tagIcon__container,
+  .tagFilter__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tagFilter__title .tagIcon__container,
+  .tagFilter__title .tagIcon__container img,
+  .tagFilter__close {
+    width: 36px;
+    height: 36px;
+  }
+}

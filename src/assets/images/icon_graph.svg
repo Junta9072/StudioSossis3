@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <rect x=".5" y=".5" width="20" height="20" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="m20.5.5C20.5,13.83.5,7.17.5,20.5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="13.83" y="13.83" width="6.67" height="6.67" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="7.17" y="13.83" width="6.67" height="6.67" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x=".5" y=".5" width="6.67" height="6.67" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="7.17" y=".5" width="6.67" height="6.67" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="7.17" y1="9.29" x2="7.17" y2="7.17" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="13.83" y1="13.83" x2="13.83" y2="11.71" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

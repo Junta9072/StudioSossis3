@@ -1,0 +1,150 @@
+@import url("../styles/globals.css");
+
+.showCase__spacer {
+  display: block;
+  height: 100vh;
+  background-color: transparent;
+  position: relative;
+}
+
+.showCase__cursor {
+  position: absolute;
+  width: 100px;
+  transition: transform var(--transitionSTD__length);
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .showCase__cursor {
+    display: none; /* Disable the cursor-following behavior */
+  }
+}
+
+.showCase__container {
+  background-color: #000;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+
+  animation: 0.3s ease-out showCase__containerANI both;
+  z-index: -1;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+@keyframes showCase__containerANI {
+  0% {
+    transform: translateY(50vh);
+  }
+  100% {
+    transform: translateY(0vh);
+  }
+}
+.showCase__header {
+  width: var(--menuOffset);
+  height: 100vh;
+  /* margin-left: 60px; */
+  padding: var(--gutterLRG);
+  box-sizing: border-box;
+}
+
+.showCase__title {
+  font-family: joyride;
+  font-size: 64pt;
+  color: white;
+
+  width: 100%;
+  border-bottom: var(--borderSTD);
+  border-color: white;
+  margin-bottom: var(--gutterSML);
+  text-transform: uppercase;
+
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+.title__wordContainer:nth-child(even) {
+  width: 100%;
+  text-align: right;
+}
+
+.title__wordContainer,
+.showCase__wordContainer {
+  overflow: hidden;
+}
+
+.title__word,
+.showCase__word {
+  animation: 0.5s both ease-out showCase__wordANI;
+}
+
+@keyframes showCase__wordANI {
+  0% {
+    transform: translateY(110%);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.showCase__subTitle {
+  font-family: montreal;
+  color: white;
+}
+
+.showCase__datum {
+  font-family: montreal;
+  color: white;
+}
+
+.showCase__footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: var(--menuOffset);
+  padding: var(--gutterLRG);
+  box-sizing: border-box;
+}
+
+.showCase__icon {
+  width: 50px;
+}
+
+@media (max-width: 970px) {
+  .showCase__title {
+    font-size: 48pt;
+  }
+}
+
+@media (max-width: 770px) {
+  .showCase__title {
+    font-size: 36pt;
+  }
+}
+
+@media (max-width: 590px) {
+  .showCase__container {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .showCase__title {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    width: auto;
+    border-bottom: none;
+    padding-bottom: var(--gutterSTD);
+  }
+
+  .showCase__subTitle {
+    display: none;
+  }
+}

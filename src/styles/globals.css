@@ -1,0 +1,47 @@
+#root {
+  /* interpolate-size: allow-keywords; */
+
+  --borderSTD: 2px white solid;
+  --borderSTD__black: 2px black solid;
+  --borderSTD__width: 2px;
+  --borderSTD__style: solid;
+
+  --transitionSTD: 0.2s linear;
+  --transitionSTD__length: 0.2s;
+
+  --menuWidth: 75px;
+  --menuOffset: calc(100% - var(--menuWidth));
+
+  --gutterSTD: 16px;
+  --gutterSML: 8px;
+  --gutterMED: 24px;
+  --gutterLRG: 32px;
+}
+
+/* body * {
+  cursor: url("../assets/images/cursor_learnmore.svg"), auto;
+} */
+
+body {
+  background-color: #000;
+}
+
+@font-face {
+  font-family: joyride;
+  src: url("../assets/fonts/JoyrideWIDE.ttf");
+}
+
+@font-face {
+  font-family: joyrideWIDE;
+  src: url("../assets/fonts/JoyrideWIDE.ttf");
+}
+
+@font-face {
+  font-family: arges;
+  src: url("../assets/fonts/arges-variable-wght-wdth-slnt.ttf");
+}
+
+@font-face {
+  font-family: montreal;
+  src: url("../assets/fonts/PPNeueMontreal-Regular.otf");
+}
