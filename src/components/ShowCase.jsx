@@ -81,7 +81,7 @@ export default function ShowCase(props) {
         onMouseLeave={() => setCursorScale(0)}
       >
         <img
-          src="./src/assets/images/cursor_learnmore_type.svg"
+          src="./assets/images/cursor_learnmore_type.svg"
           className="showCase__cursor"
           style={{
             left: cursorX + 32,

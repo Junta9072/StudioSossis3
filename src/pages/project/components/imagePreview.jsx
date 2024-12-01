@@ -81,7 +81,7 @@ export default function ImagePreview(props) {
           draggable="false"
         />
         <div className="imgPreview__close" onClick={() => props.exitPreview()}>
-          <img src="./src/assets/images/icon_close.svg" />
+          <img src="./assets/images/icon_close.svg" />
           <p>close</p>
         </div>
       </div>

@@ -83,7 +83,7 @@ export default function Contact() {
               <h1 className="contact__title">Contact</h1>
               <img
                 className="contact__qr"
-                src="./src/assets/images/hotline.svg"
+                src="./assets/images/hotline.svg"
                 alt=""
               />
             </div>

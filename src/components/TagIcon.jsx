@@ -1,5 +1,5 @@
 export default function TagIcon(props) {
-  let path = "./src/assets/images/tags/";
+  let path = "./assets/images/tags/";
   let alt = "";
 
   function getIcon() {

@@ -94,7 +94,7 @@ export default function ContactForm() {
         <button className="form__submit" type="submit">
           <img
             className="form__barcode"
-            src="./src/assets/images/studiosossisbarcode.svg"
+            src="./assets/images/studiosossisbarcode.svg"
             alt=""
           />
           <div className="form__submit__text">SEND</div>

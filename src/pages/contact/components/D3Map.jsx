@@ -1,4 +1,6 @@
-import * as d3 from "d3";
+import { geoOrthographic, geoPath, geoGraticule } from "d3-geo";
+import { select } from "d3-selection";
+import { timer } from "d3-timer";
 import { useState, useEffect, useRef } from "react";
 import world_json from "./world.json";
 
@@ -17,26 +19,22 @@ export default function D3Map() {
     let height = 500;
     const sensitivity = 75;
 
-    let projection = d3
-      .geoOrthographic()
+    // Create a projection using geoOrthographic from d3-geo
+    let projection = geoOrthographic()
       .scale(250)
       .center([0, 0])
       .rotate([0, -30])
       .translate([width / 2, height / 2]);
 
     const initialScale = projection.scale();
-    let path = d3.geoPath().projection(projection);
+    let path = geoPath().projection(projection);
 
-    let svg = d3
-      .select(globeRef.current)
+    let svg = select(globeRef.current)
       .append("div")
-      // Container class to make it responsive.
       .classed("svg-container", true)
       .append("svg")
-      // Responsive SVG needs these 2 attributes and no width and height attr.
       .attr("preserveAspectRatio", "xMinYMin meet")
       .attr("viewBox", `0 0 ${width} ${height}`)
-      // Class to make it responsive.
       .classed("svg-content-responsive", true);
 
     let globe = svg
@@ -48,35 +46,9 @@ export default function D3Map() {
       .attr("cy", height / 2)
       .attr("r", initialScale);
 
-    // svg
-    //   .call(
-    //     d3.drag().on("drag", () => {
-    //       const rotate = projection.rotate();
-    //       const k = sensitivity / projection.scale();
-    //       projection.rotate([
-    //         rotate[0] + d3.event.dx * k,
-    //         rotate[1] - d3.event.dy * k,
-    //       ]);
-    //       path = d3.geoPath().projection(projection);
-    //       svg.selectAll("path").attr("d", path);
-    //     })
-    //   )
-    //   .call(
-    //     d3.zoom().on("zoom", () => {
-    //       if (d3.event.transform.k > 0.3) {
-    //         projection.scale(initialScale * d3.event.transform.k);
-    //         path = d3.geoPath().projection(projection);
-    //         svg.selectAll("path").attr("d", path);
-    //         globe.attr("r", projection.scale());
-    //       } else {
-    //         d3.event.transform.k = 0.3;
-    //       }
-    //     })
-    //   );
-
     let map = svg.append("g");
 
-    const graticule = d3.geoGraticule().step([30, 30]);
+    const graticule = geoGraticule().step([30, 30]);
 
     svg
       .append("path")
@@ -103,7 +75,6 @@ export default function D3Map() {
       .style("stroke-width", 1)
       .style("opacity", 1);
 
-    // Add a line between London and New York
     const lines = [
       [
         [4.25, 51.13],
@@ -114,7 +85,7 @@ export default function D3Map() {
         [4.25, 51.13],
       ],
       [
-        [72.54, 19.04], //mumbai
+        [72.54, 19.04], // mumbai
         [14.35, 50.39],
       ],
       [
@@ -135,14 +106,14 @@ export default function D3Map() {
       ],
       [
         [115.51, -31.57],
-        [174.48, -41.17], //wellington
+        [174.48, -41.17], // Wellington
       ],
       [
         [115.51, -31.57],
         [126.56, 37.31],
       ],
       [
-        [72.54, 19.04], //mumbai
+        [72.54, 19.04], // mumbai
         [126.56, 37.31],
       ],
       [
@@ -151,35 +122,35 @@ export default function D3Map() {
       ],
       [
         [139.46, 35.39],
-        [-157.51, 21.17], //honolulu
+        [-157.51, 21.17], // Honolulu
       ],
       [
         [174.48, -41.17],
-        [-157.51, 21.17], //honolulu
+        [-157.51, 21.17], // Honolulu
       ],
       [
-        [-122.28, 37.48], //sf
-        [-157.51, 21.17], //honolulu
+        [-122.28, 37.48], // SF
+        [-157.51, 21.17], // Honolulu
       ],
       [
-        [-122.28, 37.48], //sf
-        [-74, 40.7], //nyc
+        [-122.28, 37.48], // SF
+        [-74, 40.7], // NYC
       ],
       [
-        [-122.28, 37.48], //sf
-        [-99.08, 19.26], //mexico city
+        [-122.28, 37.48], // SF
+        [-99.08, 19.26], // Mexico City
       ],
       [
-        [-43.1, -22.55], //rio
-        [-99.08, 19.26], //mexico city
+        [-43.1, -22.55], // Rio
+        [-99.08, 19.26], // Mexico City
       ],
       [
-        [-74, 40.7], //nyc
-        [-99.08, 19.26], //mexico city
+        [-74, 40.7], // NYC
+        [-99.08, 19.26], // Mexico City
       ],
       [
-        [-43.1, -22.55], //rio
-        [4.25, 51.13], //be
+        [-43.1, -22.55], // Rio
+        [4.25, 51.13], // Belgium
       ],
     ];
 
@@ -205,12 +176,12 @@ export default function D3Map() {
       .attr("stroke", "red")
       .attr("stroke-width", 2);
 
-    // Optional rotate
-    d3.timer(function (elapsed) {
+    // Optional rotation using d3-timer
+    timer(function (elapsed) {
       const rotate = projection.rotate();
       const k = sensitivity / projection.scale();
       projection.rotate([rotate[0] - 0.5 * k, rotate[1]]);
-      path = d3.geoPath().projection(projection);
+      path = geoPath().projection(projection);
       svg.selectAll("path").attr("d", path);
     }, 200);
   }, []);

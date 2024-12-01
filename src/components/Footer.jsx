@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer__logo">
           <img
             className="footer__logo__sossis"
-            src="./src/assets/images/icon_triSosis.svg"
+            src="./assets/images/icon_triSosis.svg"
             alt=""
           />
           <div className="footer__logo__title">
@@ -30,7 +30,7 @@ export default function Footer() {
           <a className="footer__mail" href="mailto:yarne.brangers@telenet.be">
             <img
               className="footer__mail__icon"
-              src="./src/assets/images/icon_email.svg"
+              src="./assets/images/icon_email.svg"
               alt=""
             />
             yarne.brangers@telenet.be
