@@ -3,7 +3,7 @@ import urls from "../../../paths.json";
 import Input from "./Input";
 import TextArea from "./TextArea";
 
-export default function ContactForm() {
+export default function ContactForm(props) {
   const INPUT = "INPUT";
   const TEXTAREA = "TEXTAREA";
   const fields = [
@@ -63,6 +63,7 @@ export default function ContactForm() {
 
         const res = await req.json();
         console.log(res);
+        props.sent();
       } else {
         console.log("form on cooldown");
         alert(

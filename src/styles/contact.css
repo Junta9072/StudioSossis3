@@ -181,6 +181,27 @@
   min-width: 160px;
 }
 
+.form__switcher {
+  width: auto;
+  height: 100%;
+}
+
+.form__cover__container {
+  margin: var(--gutterSTD);
+  padding-top: var(--gutterSTD);
+  border-top: var(--borderSTD__black);
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutterSTD);
+
+  font-family: montreal;
+}
+
+.form__cover__content {
+}
+
 @media (max-width: 1390px) {
   .contact__globe {
     width: 80%;
