@@ -1,14 +1,14 @@
-import { StrictMode } from "react";
+import { StrictMode, lazy } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import "./reset.css";
 import "./index.css";
 
-import About from "./pages/about";
-import Project from "./pages/project";
-import Contact from "./pages/contact";
-import Blog from "./pages/blog";
+const About = lazy(() => import("./pages/about"));
+const Project = lazy(() => import("./pages/project"));
+const Contact = lazy(() => import("./pages/contact"));
+const Blog = lazy(() => import("./pages/blog"));
 
 const router = createBrowserRouter([
   {
