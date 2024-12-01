@@ -13,7 +13,7 @@ export default function ProjectTeaser(props) {
 
   async function getProjectTeaser(name) {
     const response = await fetch(
-      urls.localhost +
+      urls.live +
         "wp-json/wp/v2/project?order_by=rand&acf_format=standard&_fields=id,slug,title,acf.project_name,acf.project_image_thumbnail,acf.project_color_primary&per_page=4",
       {
         method: "GET",

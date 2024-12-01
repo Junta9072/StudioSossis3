@@ -31,7 +31,7 @@ export default function Project() {
 
   async function getProjectData(name) {
     const response = await fetch(
-      urls.localhost +
+      urls.live +
         "wp-json/wp/v2/project?acf_format=standard&_fields=id,slug,title,acf&slug=" +
         name,
       {

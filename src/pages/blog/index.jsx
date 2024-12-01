@@ -12,7 +12,7 @@ export default function Blog() {
           className="blog__img"
           style={{
             backgroundImage:
-              "url(" + urls.localhost + "wp-content/uploads/2024/11/blog.png)",
+              "url(" + urls.live + "wp-content/uploads/2024/11/blog.png)",
           }}
         ></div>
         <div className="blog__header">

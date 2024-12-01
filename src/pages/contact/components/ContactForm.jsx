@@ -52,7 +52,7 @@ export default function ContactForm() {
     };
 
     const req = await fetch(
-      urls.localhost + "wp-json/contact-form-7/v1/contact-forms/300/feedback",
+      urls.live + "wp-json/contact-form-7/v1/contact-forms/300/feedback",
       reqOptions
     );
 
