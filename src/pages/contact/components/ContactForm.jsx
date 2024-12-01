@@ -43,21 +43,35 @@ export default function ContactForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log(localStorage.getItem("contactFormSentTimestamp"));
+    let formLastUsed = localStorage.getItem("contactFormSentTimestamp");
+    if (formLastUsed != null) {
+      let formTimeSinceLastUsed = new Date().getTime() - formLastUsed;
+      if (formTimeSinceLastUsed > 86400000) {
+        console.log("form not on cooldown");
+        let formData = new FormData(event.target);
 
-    let formData = new FormData(event.target);
+        const reqOptions = {
+          method: "POST",
+          body: formData,
+        };
 
-    const reqOptions = {
-      method: "POST",
-      body: formData,
-    };
+        const req = await fetch(
+          urls.live + "wp-json/contact-form-7/v1/contact-forms/300/feedback",
+          reqOptions
+        );
 
-    const req = await fetch(
-      urls.live + "wp-json/contact-form-7/v1/contact-forms/300/feedback",
-      reqOptions
-    );
+        const res = await req.json();
+        console.log(res);
+      } else {
+        console.log("form on cooldown");
+        alert(
+          "In the interest of my wallet and mailbox, I limit mails to 1 per day."
+        );
+      }
+    }
 
-    const res = await req.json();
-    console.log(res);
+    localStorage.setItem("contactFormSentTimestamp", new Date().getTime());
   };
 
   return (
