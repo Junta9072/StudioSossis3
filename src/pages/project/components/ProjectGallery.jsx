@@ -13,7 +13,10 @@ export default function ProjectGallery(props) {
         } else if (item.type == "video") {
           return (
             <div className="project__main__slide" key={item.ID}>
-              <video controls className="project__main__slide__video">
+              <video
+                controls
+                className="project__main__slide__image project__main__slide__video"
+              >
                 <source src={item.url} type={item.mime_type} />
                 video.
               </video>

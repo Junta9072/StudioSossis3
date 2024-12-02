@@ -92,13 +92,14 @@
 
 .form__container {
   font-family: montreal;
-  margin: var(--gutterSTD);
   padding-top: var(--gutterSTD);
   border-top: var(--borderSTD__black);
   display: flex;
   flex-direction: column;
   gap: var(--gutterSML);
   flex-grow: 1;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .form__field__container {
@@ -148,6 +149,7 @@
 .form__submit {
   width: 100%;
   height: 100%;
+  max-height: 60px;
 
   box-sizing: border-box;
 
@@ -165,6 +167,9 @@
 .form__barcode {
   height: 100%;
   max-width: 100%;
+
+  flex-grow: 1;
+  object-fit: cover;
 }
 
 .form__submit__text {
@@ -183,7 +188,8 @@
 
 .form__switcher {
   width: auto;
-  height: 100%;
+  flex-grow: 1;
+  padding: var(--gutterSTD);
 }
 
 .form__cover__container {
@@ -197,9 +203,6 @@
   gap: var(--gutterSTD);
 
   font-family: montreal;
-}
-
-.form__cover__content {
 }
 
 @media (max-width: 1390px) {
