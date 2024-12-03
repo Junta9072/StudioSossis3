@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 import urls from "../../paths.json";
 
@@ -12,6 +13,9 @@ import ImagePreview from "./components/imagePreview";
 import ProjectTeaser from "./components/ProjectTeaser";
 
 export default function Project() {
+  const { code, project } = useParams();
+  console.log(code, project);
+
   const [loaderDisplay, setLoaderDisplay] = useState("");
   const [apiRes, setApiRes] = useState("");
   const [title, setTitle] = useState("");
@@ -68,10 +72,8 @@ export default function Project() {
   };
 
   useEffect(() => {
-    let params = new URLSearchParams(document.location.search);
-    let name = params.get("project");
-    setTitle(name);
-    getProjectData(name);
+    setTitle(project);
+    getProjectData(project);
   }, []);
 
   useEffect(() => {

@@ -1,11 +1,15 @@
 import "../styles/loader.css";
+import { useParams } from "react-router-dom";
 
 export default function Loader(props) {
+  const { code, project } = useParams();
+  console.log(code, project);
+
   let loaderFill;
   let logoFill;
-  let params = new URLSearchParams(document.location.search);
-  if (params.get("color") != null) {
-    loaderFill = params.get("color");
+
+  if (code != null) {
+    loaderFill = "#" + code;
     if (loaderFill == "#000000") {
       logoFill = "#ffffff";
     } else {

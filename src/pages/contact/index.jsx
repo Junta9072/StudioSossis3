@@ -126,8 +126,8 @@ export default function Contact() {
                 about any projects of mine. Or ideas of yours.
               </p>
               <p>
-                For other questions, you can contact me @{" "}
-                <a href="mailto:yarne.brangers@telenet.be">
+                For other questions, you can contact me @
+                <a href="mailto:hello@studiosossis.com">
                   yarne.brangers@telenet.be
                 </a>
                 .

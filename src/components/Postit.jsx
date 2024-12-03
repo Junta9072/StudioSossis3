@@ -50,12 +50,9 @@ export default function Pamflet(props) {
 
   return (
     <a
-      href={
-        "project?color=" +
-        encodeURIComponent(props.data.acf.project_color_primary) +
-        "&project=" +
-        encodeURIComponent(props.data.slug)
-      }
+      href={`/${encodeURIComponent(
+        props.data.acf.project_color_primary.replace("#", "")
+      )}/${encodeURIComponent(props.data.slug)}`}
       className="project postit"
       style={{
         backgroundColor: props.data.acf.project_color_primary,
