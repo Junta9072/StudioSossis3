@@ -71,7 +71,7 @@ export default function ShowCase(props) {
   return (
     <>
       <a
-        href={"project?project=" + slug}
+        href={`/${encodeURIComponent("f43711")}/${encodeURIComponent(slug)}`}
         className="showCase__spacer"
         onMouseMove={(e) => {
           setCursorX(e.pageX);
