@@ -46,12 +46,7 @@ export default function ProjectTeaser(props) {
   return (
     <a
       className="teaser__container"
-      href={
-        "project?color=" +
-        encodeURIComponent(teaserColor) +
-        "&project=" +
-        encodeURIComponent(teaserSlug)
-      }
+      href={`/${encodeURIComponent(teaserColor)}/${teaserSlug}`}
     >
       <div className="teaser__title">
         <div className="teaser__title__content">Discover More</div>
