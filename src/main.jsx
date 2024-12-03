@@ -9,7 +9,7 @@ const About = lazy(() => import("./pages/about"));
 const Project = lazy(() => import("./pages/project"));
 const Contact = lazy(() => import("./pages/contact"));
 const Blog = lazy(() => import("./pages/blog"));
-const NotFound = lazy(() => import("./pages/notFound"));
+const NotFound = lazy(() => import("./pages/notfound/index.jsx"));
 
 const router = createBrowserRouter([
   {
