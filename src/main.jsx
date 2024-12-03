@@ -9,6 +9,7 @@ const About = lazy(() => import("./pages/about"));
 const Project = lazy(() => import("./pages/project"));
 const Contact = lazy(() => import("./pages/contact"));
 const Blog = lazy(() => import("./pages/blog"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
   },
   { path: "contact", element: <Contact /> },
   { path: "blog", element: <Blog /> },
+  { path: "*", element: <NotFound /> },
 ]);
 
 createRoot(document.getElementById("root")).render(
