@@ -24,16 +24,20 @@ export default function Contact() {
   useEffect(() => {
     // console.log(localStorage.getItem("contactFormSentTimestamp"));
     if (localStorage.getItem("contactFormSentTimestamp") != null) {
-      setFormContent(
-        <ContactFormCover
-          timeout={
-            <span>
-              Looks like you've recently sent me a message! <br /> In the
-              interest of my mailbox I limit them to 1 per day.
-            </span>
-          }
-        />
-      );
+      let formLastUsed = localStorage.getItem("contactFormSentTimestamp");
+      let formTimeSinceLastUsed = new Date().getTime() - formLastUsed;
+      if (formTimeSinceLastUsed < 86400000) {
+        setFormContent(
+          <ContactFormCover
+            timeout={
+              <span>
+                Looks like you've recently sent me a message! <br /> In the
+                interest of my mailbox I limit them to 1 per day.
+              </span>
+            }
+          />
+        );
+      }
     }
     if (formUsedToggle == true) {
       setFormContent(<ContactFormCover />);

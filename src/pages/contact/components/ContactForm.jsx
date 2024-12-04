@@ -45,8 +45,11 @@ export default function ContactForm(props) {
     event.preventDefault();
     console.log(localStorage.getItem("contactFormSentTimestamp"));
     let formLastUsed = localStorage.getItem("contactFormSentTimestamp");
-    if (formLastUsed != null) {
-      let formTimeSinceLastUsed = new Date().getTime() - formLastUsed;
+    let formTimeSinceLastUsed = new Date().getTime() - formLastUsed;
+    if (
+      formLastUsed != null ||
+      formTimeSinceLastUsed - formLastUsed > 86400000
+    ) {
       if (formTimeSinceLastUsed > 86400000) {
         console.log("form not on cooldown");
         let formData = new FormData(event.target);
@@ -55,6 +58,8 @@ export default function ContactForm(props) {
           method: "POST",
           body: formData,
         };
+
+        console.log("email sent");
 
         const req = await fetch(
           urls.live + "wp-json/contact-form-7/v1/contact-forms/300/feedback",
