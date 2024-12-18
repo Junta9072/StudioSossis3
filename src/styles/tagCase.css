@@ -49,6 +49,8 @@
 
   align-items: flex-start;
   justify-content: center;
+
+  cursor: pointer;
 }
 
 .tagLine__word {

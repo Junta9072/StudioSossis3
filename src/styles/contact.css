@@ -162,6 +162,8 @@
 
   overflow: hidden;
   padding: 0px;
+
+  cursor: pointer;
 }
 
 .form__barcode {

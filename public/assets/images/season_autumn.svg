@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-25a5b6f3-47c3-459d-92a3-74ea3c433a27" data-name="Laag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
+  <g id="uuid-4d42edac-13a1-477e-b86d-21eeea615970" data-name="Layer 1">
+    <g>
+      <polygon points="16.06 11.61 20.5 7.17 20.5 .5 13.83 .5 9.39 4.94 9.39 .5 4.94 2.72 .5 .5 .5 10.5 10.5 20.5 20.5 20.5 18.28 16.06 20.5 11.61 16.06 11.61" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1=".5" y1="20.5" x2="15.83" y2="5.17" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <g>
+        <line x1="10.5" y1="15.5" x2="12.64" y2="15.5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="5.5" y1="8.36" x2="5.5" y2="10.5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+  </g>
+</svg>

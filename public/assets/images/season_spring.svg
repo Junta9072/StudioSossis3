@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-c3bed64c-3e05-4416-b272-12d6f7a3bbbf" data-name="Laag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
+  <g id="uuid-cc833dd6-9624-404c-af43-bf365f3a59e2" data-name="Layer 1">
+    <g>
+      <g>
+        <g>
+          <line x1="13.99" y1="7.01" x2="15.5" y2="5.5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="5.4" y1="5.5" x2="6.92" y2="7.01" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <g>
+          <line x1="7.01" y1="13.99" x2="5.5" y2="15.5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="15.6" y1="15.5" x2="14.08" y2="13.99" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+      </g>
+      <g>
+        <path d="m15.5.5h0c2.76,0,5,2.24,5,5h0c0,2.76-2.24,5-5,5h-5v-5c0-2.76,2.24-5,5-5Z" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="m5.5.5h0c2.76,0,5,2.24,5,5h0c0,2.76-2.24,5-5,5H.5v-5C.5,2.74,2.74.5,5.5.5Z" transform="translate(0 11) rotate(-90)" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="m10.5,10.5h5c2.76,0,5,2.24,5,5h0c0,2.76-2.24,5-5,5h0c-2.76,0-5-2.24-5-5v-5h0Z" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="m.5,10.5h5c2.76,0,5,2.24,5,5h0c0,2.76-2.24,5-5,5h0c-2.76,0-5-2.24-5-5v-5h0Z" transform="translate(21 10) rotate(90)" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -339,6 +339,8 @@
 
   font-family: montreal;
   font-size: 10pt;
+
+  cursor: pointer;
 }
 
 .imgPreview__close img {

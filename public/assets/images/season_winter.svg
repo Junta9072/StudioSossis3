@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-900a2bd1-24cc-405a-8095-f9f560325b34" data-name="Laag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
+  <g id="uuid-4417b738-0ffa-48a1-86ee-41ecc0c5bb4e" data-name="Layer 1">
+    <g>
+      <line x1="20.5" y1=".5" x2=".5" y2="20.5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="20.5 5.5 15.5 5.5 15.5 .5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1=".5" y1=".5" x2="20.5" y2="20.5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points=".5 5.5 5.5 5.5 5.5 .5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="20.5 15.5 15.5 15.5 15.5 20.5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points=".5 15.5 5.5 15.5 5.5 20.5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="8" y1="10.5" x2="13" y2="10.5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="10.5" y1="8" x2="10.5" y2="13" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1=".5" y1="10.5" x2="3" y2="10.5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="10.5" y1=".5" x2="10.5" y2="3" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="20.5" y1="10.5" x2="18" y2="10.5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="10.5" y1="18" x2="10.5" y2="20.5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

@@ -152,6 +152,8 @@
 
   transition: var(--transitionSTD);
   background-color: var(--accentColor);
+
+  cursor: pointer;
 }
 
 .graph__tab:hover {
@@ -336,6 +338,8 @@
   transition: var(--transitionSTD);
 
   display: grid;
+
+  cursor: pointer;
 }
 
 .timeline__item__title {
@@ -473,6 +477,8 @@
 .timeline__content__closer {
   display: flex;
   gap: var(--gutterSTD);
+
+  cursor: pointer;
 }
 
 .timeline__content__close {

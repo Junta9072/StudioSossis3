@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-9eb7c0b3-5068-4d85-9e3c-ba1387cfca4f" data-name="Laag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
+  <g id="uuid-ec4d549d-733e-4dcd-b904-8ad36bbb57b1" data-name="Layer 1">
+    <circle cx="10.5" cy="10.5" r="10" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x=".5" y=".5" width="20" height="20" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="20.5" y1=".5" x2=".5" y2="20.5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1=".5" y1=".5" x2="20.5" y2="20.5" fill="none" stroke="#e7dfcd" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
