@@ -9,6 +9,7 @@ export default function Pamflet(props) {
 
   useEffect(() => {
     if (props.data.acf) {
+      // console.log(props.data);
       setTitle(
         props.data.acf.project_name.split(" ").map((item, i) => {
           return (
@@ -63,7 +64,7 @@ export default function Pamflet(props) {
         className="project__bg"
         style={{
           backgroundImage:
-            "url(" + props.data.acf.project_image_header.url + ")",
+            "url(" + props.data.acf.project_image_header.sizes.large + ")",
         }}
       ></div>
       <div

@@ -54,7 +54,14 @@ export default function MonthBlock(props) {
         return (
           <div className="monthBlock__column" key={c}>
             {column.map((post, p) => {
-              return <BlogPost key={p} data={post.data} tags={props.tags} />;
+              return (
+                <BlogPost
+                  key={p}
+                  data={post.data}
+                  tags={props.tags}
+                  preview={props.preview}
+                />
+              );
             })}
           </div>
         );

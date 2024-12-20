@@ -6,16 +6,42 @@ import Footer from "../../components/Footer";
 
 import MonthBlock from "./components/MonthBlock.jsx";
 import MonthBlockPlaceholder from "./components/MonthBlockPlaceholder.jsx";
+import ImagePreview from "../project/components/imagePreview.jsx";
 
 import { useEffect, useState } from "react";
 
 export default function Blog() {
   const [bgGradients, setBgGradients] = useState(null);
-  const [time, setTime] = useState(new Date());
   const [blogPosts, setBlogPosts] = useState(<MonthBlockPlaceholder />);
-  const [blogPostTags, setBlogPostTags] = useState("");
   const [newPostVisible, setNewPostVisible] = useState("blog__newPost--hidden");
   const [newPostCounter, setNewPostCounter] = useState(0);
+
+  const [date, setDate] = useState(dayjs());
+
+  const [previewToggle, setPreviewToggle] = useState(false);
+  const [previewImg, setPreviewImg] = useState("");
+
+  const togglePreview = () => {
+    console.log("extipr");
+    if (previewToggle == true) {
+      setPreviewToggle(false);
+    } else {
+      setPreviewToggle(true);
+    }
+  };
+
+  const imgPreview = (img) => {
+    console.log(img);
+    setPreviewImg("");
+    setPreviewImg(img);
+    togglePreview();
+  };
+
+  const seasons = ["winter", "spring", "summer", "autumn"];
+
+  function getSeason(monthInt) {
+    return seasons[Math.floor(((monthInt + 1) % 12) / 3)];
+  }
 
   const months = [
     "january",
@@ -32,19 +58,8 @@ export default function Blog() {
     "december",
   ];
 
-  const [seasonData, setSeasonData] = useState({
-    season_name: "winter",
-    season_month: months[dayjs().month()],
-  });
-
-  function getSeasonData(monthInt) {
-    let seasonIndex = Math.floor(((monthInt + 1) % 12) / 3); // Adjust month index to fit the seasons
-    let seasonNames = ["winter", "spring", "summer", "fall"];
-    console.log(months[dayjs().month()]);
-    return {
-      season_name: seasonNames[seasonIndex],
-      season_month: months[dayjs().month()],
-    };
+  function getMonthString(monthInt) {
+    return months[(monthInt + 1) % 12];
   }
 
   const gridOffsetY = [];
@@ -63,7 +78,7 @@ export default function Blog() {
 
           return (
             <div
-              className={"bg__gradient bg__" + seasonData.season_name}
+              className={"bg__gradient bg__" + getSeason(date.month())}
               style={{ animationDelay: delay + "s" }}
               key={i}
             ></div>
@@ -129,7 +144,7 @@ export default function Blog() {
       : setNewPostVisible("blog__newPost--active");
 
     //get current month
-    let currMonth = seasonData.season_month;
+    let currMonth = months[date.month()];
     let perMonthApiRes = [[]];
     let perMonthIndex = 0;
     apiRes.reduce((prev, curr) => {
@@ -155,9 +170,10 @@ export default function Blog() {
             key={i}
             index={i}
             data={item}
-            season={seasonData.season_name}
-            title={seasonData.season_month}
+            season={getSeason(date.month() + i)}
+            title={getMonthString(date.month() + i)}
             tags={tags}
+            preview={imgPreview}
           />
         );
       })
@@ -165,8 +181,6 @@ export default function Blog() {
   };
 
   useEffect(() => {
-    setSeasonData(getSeasonData(dayjs().month()));
-
     for (let i = 0; i < gridCols; i++) {
       gridOffsetY.push(i);
     }
@@ -195,16 +209,16 @@ export default function Blog() {
       <div className={"blog__newPost__button " + newPostVisible}>
         <div className="blog__newPost__bgGradients">
           <div
-            className={"blog__newPost__bg bg__" + seasonData.season_name}
+            className={"blog__newPost__bg bg__" + getSeason(date.month())}
           ></div>
           <div
-            className={"blog__newPost__bg bg__" + seasonData.season_name}
+            className={"blog__newPost__bg bg__" + getSeason(date.month())}
           ></div>
           <div
-            className={"blog__newPost__bg bg__" + seasonData.season_name}
+            className={"blog__newPost__bg bg__" + getSeason(date.month())}
           ></div>
           <div
-            className={"blog__newPost__bg bg__" + seasonData.season_name}
+            className={"blog__newPost__bg bg__" + getSeason(date.month())}
           ></div>
         </div>
 
@@ -217,6 +231,11 @@ export default function Blog() {
       <Footer />
 
       <Menu color="#fff" />
+      <ImagePreview
+        exitPreview={togglePreview}
+        toggle={previewToggle}
+        img={previewImg}
+      />
     </>
   );
 }

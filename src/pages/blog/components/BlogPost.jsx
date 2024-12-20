@@ -30,6 +30,7 @@ export default function BlogPost(props) {
         className="blogpost__img"
         src={props.data.acf.blogpost_image.sizes.large}
         alt=""
+        onClick={() => props.preview(props.data.acf.blogpost_image.url)}
       />
     </div>
   );

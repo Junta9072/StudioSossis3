@@ -283,7 +283,7 @@
 
   z-index: 3;
 
-  transition: var(--transitionSTD);
+  /* transition: var(--transitionSTD); */
 }
 
 .imgPreview__bg {
@@ -352,6 +352,7 @@
   padding: var(--gutterSML) 0px;
   width: 100%;
   text-align: center;
+  color: white;
 }
 
 .teaser__container {

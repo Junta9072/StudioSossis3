@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../../../styles/project.css";
 
 export default function ImagePreview(props) {
   const [displayToggle, setDisplayToggle] = useState("");
