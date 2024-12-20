@@ -59,7 +59,7 @@ export default function Blog() {
   ];
 
   function getMonthString(monthInt) {
-    return months[(monthInt + 1) % 12];
+    return months[monthInt % 12];
   }
 
   const gridOffsetY = [];

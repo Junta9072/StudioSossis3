@@ -64,7 +64,7 @@ export default function Pamflet(props) {
         className="project__bg"
         style={{
           backgroundImage:
-            "url(" + props.data.acf.project_image_header.sizes.large + ")",
+            "url(" + props.data.acf.project_image_header.url + ")",
         }}
       ></div>
       <div
