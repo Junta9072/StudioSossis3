@@ -27,13 +27,13 @@ export default function Footer() {
           <a className="footer__link" href="./contact">
             Contact
           </a>
-          <a className="footer__mail" href="mailto:yarne.brangers@telenet.be">
+          <a className="footer__mail" href="mailto:hello@studiosossis.com">
             <img
               className="footer__mail__icon"
               src="/assets/images/icon_email.svg"
               alt=""
             />
-            yarne.brangers@telenet.be
+            hello@studiosossis.com
           </a>
         </div>
       </div>

@@ -132,7 +132,7 @@ export default function Contact() {
               <p>
                 For other questions, you can contact me @
                 <a href="mailto:hello@studiosossis.com">
-                  yarne.brangers@telenet.be
+                  hello@studiosossis.com
                 </a>
                 .
               </p>
