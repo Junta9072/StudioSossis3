@@ -13,11 +13,14 @@ import { useEffect, useState } from "react";
 export default function Blog() {
   const [bgGradients, setBgGradients] = useState(null);
   const [blogPosts, setBlogPosts] = useState(<MonthBlockPlaceholder />);
+
+  //new post toast
   const [newPostVisible, setNewPostVisible] = useState("blog__newPost--hidden");
   const [newPostCounter, setNewPostCounter] = useState(0);
 
   const [date, setDate] = useState(dayjs());
 
+  //fullscreen image
   const [previewToggle, setPreviewToggle] = useState(false);
   const [previewImg, setPreviewImg] = useState("");
 
@@ -37,6 +40,7 @@ export default function Blog() {
     togglePreview();
   };
 
+  //bg color handler
   const seasons = ["winter", "spring", "summer", "autumn"];
 
   function getSeason(monthInt) {
@@ -106,6 +110,7 @@ export default function Blog() {
 
   const getBlogPosts = async (tags) => {
     const currentMonthStart = dayjs()
+      .subtract(1, "month")
       .startOf("month")
       .format("YYYY-MM-DDTHH:mm:ss");
     const currentMonthEnd = dayjs()
@@ -113,7 +118,7 @@ export default function Blog() {
       .format("YYYY-MM-DDTHH:mm:ss");
     const response = await fetch(
       urls.live +
-        `wp-json/wp/v2/blogpost?acf_format=standard&_fields=id,date,slug,title,acf&per_page=20&after=${currentMonthStart}&before=${currentMonthEnd}`,
+        `wp-json/wp/v2/blogpost?acf_format=standard&_fields=id,date,slug,title,acf&per_page=20`,
       // &after=2024-12-12T00:00:00&before=2024-12-12T23:59:59
       {
         method: "GET",
@@ -138,6 +143,7 @@ export default function Blog() {
       });
       setNewPostCounter(newPosts);
     }
+    //if not log this visit
     localStorage.setItem("lastBlogVisit", JSON.stringify(dayjs()));
     newPostCounter == 0
       ? setNewPostVisible("blog__newPost--hidden")
@@ -145,15 +151,24 @@ export default function Blog() {
 
     //get current month
     let currMonth = months[date.month()];
+
     let perMonthApiRes = [[]];
     let perMonthIndex = 0;
+
+    //get month of the most recent blogpost
+    let MonthOfLatestPost = dayjs(apiRes[0].date).month();
+    // console.log(MonthOfLatestPost);
+
+    //insert a month header if the a new month happens between posts
     apiRes.reduce((prev, curr) => {
       const prevMonth = dayjs(prev.date).month();
       const currMonth = dayjs(curr.date).month();
 
+      //if no month change => push to current array slot
       if (prevMonth === currMonth) {
         perMonthApiRes[perMonthIndex].push(curr);
       } else {
+        //else add new array and push the post in there
         perMonthIndex++;
         perMonthApiRes.push([curr]);
       }
@@ -170,8 +185,8 @@ export default function Blog() {
             key={i}
             index={i}
             data={item}
-            season={getSeason(date.month() + i)}
-            title={getMonthString(date.month() + i)}
+            season={getSeason(MonthOfLatestPost)}
+            title={getMonthString(MonthOfLatestPost)}
             tags={tags}
             preview={imgPreview}
           />

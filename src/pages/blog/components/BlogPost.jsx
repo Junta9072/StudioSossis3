@@ -5,7 +5,7 @@ export default function BlogPost(props) {
     <div className="blogpost__container">
       <div className="blogpost__content">
         <div className="blogpost__header">
-          <h3 className="blogpost__title">{props.data.title.rendered}</h3>
+          <h3 className="blogpost__title">{props.data.acf.blogpost_title}</h3>
           <p className="blogpost__date">
             {postDate.getDate() + 1 + "—" + postMonth}
           </p>
