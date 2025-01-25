@@ -185,8 +185,8 @@ export default function Blog() {
             key={i}
             index={i}
             data={item}
-            season={getSeason(MonthOfLatestPost + i)}
-            title={getMonthString(MonthOfLatestPost + i)}
+            season={getSeason(MonthOfLatestPost + 12 - i)}
+            title={getMonthString(MonthOfLatestPost + 12 - i)}
             tags={tags}
             preview={imgPreview}
           />
