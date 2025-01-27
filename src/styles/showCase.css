@@ -56,7 +56,7 @@
 }
 
 .showCase__title {
-  font-family: joyride;
+  font-family: joyride, Arial, Helvetica, sans-serif;
   font-size: 64pt;
   color: white;
 
