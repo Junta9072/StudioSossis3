@@ -34,7 +34,7 @@ function App() {
     const apiRes = await response.json(); //extract JSON from the http response
     // do something with myJson
     console.log(apiRes);
-    setShowCaseData(apiRes[0]);
+    setShowCaseData(apiRes.find((item, i) => item.slug === "studio-sossis"));
     setProjectData(apiRes);
   };
 
