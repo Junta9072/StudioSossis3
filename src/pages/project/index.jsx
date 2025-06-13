@@ -25,6 +25,8 @@ export default function Project() {
   const [body, setBody] = useState("");
   const [tags, setTags] = useState("");
   const [gallery, setGallery] = useState({});
+  const [projectLive, setProjectLive] = useState("");
+  const [projectLink, setProjectLink] = useState("");
 
   const [id, setId] = useState("");
 
@@ -107,6 +109,39 @@ export default function Project() {
         backgroundColor: apiRes.project_color_primary,
         color: apiRes.project_color_secondary,
       });
+      console.log(apiRes.project_link);
+      // setLink();
+      if (apiRes.project_link !== "") {
+        console.log("link link link");
+        // setLink(apiRes.project_link);
+
+        setProjectLive(() => {
+          return (
+            <div className="project__header__desc--bordertop">
+              <h3 className="project__header__desc__title ">LINK</h3>
+              <div className="project__header__desc">
+                go take a look{" "}
+                <a href={apiRes.project_link} className="project__header__link">
+                  here!
+                </a>
+              </div>
+            </div>
+          );
+        });
+
+        setProjectLink(() => {
+          return (
+            <div className="project__header__desc--bordertop project__header__tags--bordertop">
+              <h3 className="project__header__tags__title project__header--bordertop">
+                LIVE <span className="project__header__tags__live">⬤</span>
+              </h3>
+              <div className="project__header__tags__list project__header--bordertop">
+                I'm online!
+              </div>
+            </div>
+          );
+        });
+      }
     } catch {
       //api not ready
     }
@@ -130,6 +165,7 @@ export default function Project() {
         <div className="project__header__tags__container">
           <h3 className="project__header__tags__title">Tags</h3>
           <div className="project__header__tags__list">{tags}</div>
+          {projectLink}
         </div>
 
         <div className="project__header__title">{title}</div>
@@ -140,6 +176,7 @@ export default function Project() {
           <div className="project__header__desc__content">
             <h3 className="project__header__desc__title">summary</h3>
             <div className="project__header__desc">{description}</div>
+            {projectLive}
           </div>
         </div>
       </header>
