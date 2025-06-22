@@ -8,6 +8,8 @@ export default function MonthBlock(props) {
   const handleWindowResize = useCallback((event) => {
     setWindowSize(window.innerWidth);
   }, []);
+  const [blockMonth, setBlockMonth] = useState("");
+  const [blockSeason, setBlockseason] = useState("");
 
   useEffect(() => {
     window.addEventListener("resize", handleWindowResize);
@@ -20,6 +22,32 @@ export default function MonthBlock(props) {
   let postColumns = [];
 
   const [monthBlockContent, setMonthBlockContent] = useState("");
+
+  //bg color handler
+  const seasons = ["winter", "spring", "summer", "autumn"];
+
+  function getSeason(monthInt) {
+    return seasons[Math.floor(((monthInt + 1) % 12) / 3)];
+  }
+
+  const months = [
+    "january",
+    "february",
+    "march",
+    "april",
+    "may",
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+    "december",
+  ];
+
+  function getMonthString(monthInt) {
+    return months[monthInt % 12];
+  }
 
   useEffect(() => {
     if (windowSize < 770) {
@@ -49,6 +77,10 @@ export default function MonthBlock(props) {
     });
     // console.log(postColumns);
 
+    setBlockMonth(getMonthString(new Date(props.data[0].date).getMonth()));
+
+    setBlockseason(getSeason(new Date(props.data[0].date).getMonth()));
+
     setMonthBlockContent(
       postColumns.map((column, c) => {
         return (
@@ -75,7 +107,7 @@ export default function MonthBlock(props) {
 
   return (
     <div className="monthBlock" key={props.index}>
-      <MonthHeader season={props.season} title={props.title} />
+      <MonthHeader season={blockSeason} title={blockMonth} />
       {monthBlockContent}
     </div>
   );
